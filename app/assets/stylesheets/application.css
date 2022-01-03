@@ -73,3 +73,7 @@
  .category-image {
    width: 20%;
  }
+
+ .no-category {
+   height: 75vh;
+ }

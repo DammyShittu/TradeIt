@@ -1,0 +1,39 @@
+<header>
+  <nav class="nav navbar-light bg-primary">
+    <div class="container py-1 px-3 d-flex justify-content-between align-items-center">
+    <%= link_to fa_icon('arrow-left'), authenticated_root_path, class: "fs-6 fw-normal text-white"  %>
+    <h1 class="fs-6 fw-normal text-white pt-2">EXCHANGES</h1>
+    <div></div>
+    </div>
+  </nav>
+</header>
+
+<section>
+    <% if @exchanges.empty? %>
+       <p class="w-75 d-flex justify-content-center align-items-center mx-auto text-center no-category">
+        You do not have any exchanges yet<br> Kindly create one with the "Add An Exchange" button below
+      </p>
+    <% else %>
+        <ul class="m-0 p-0 mb-5">
+            <%= render partial: 'category_list', locals: { category: @category } %>
+
+            <ul class="m-0 p-0">
+              <% @exchanges.each do |exchange| %>
+                <li class="my-3 mx-2 border border-gray p-2 rounded bg-white">
+                    <div class="d-flex justify-content-between align-items-center mt-2 ">
+                      <h2 class=" fs-5"><%= exchange.name  %></h2>
+                      <p>$<%= exchange.amount %></p>
+                  </div>
+                      <span class="text-muted"><%= exchange.created_at.strftime('%d %b %Y') %> at <%= exchange.created_at.strftime("%r") %></span>
+                </li>
+              <% end %>
+            </ul>
+        </ul>
+    <% end %>
+</section>
+
+<footer class="bg-primary p-2 mt-5 fixed-bottom ">
+  <div class="w-100 d-flex justify-content-center align-items-center bg-transparent border border-white">
+  <%= link_to 'Add An Exchange', new_exchange_path, class: ' text-white p-2 text-decoration-none stretched-link' %>
+  </div>
+</footer>

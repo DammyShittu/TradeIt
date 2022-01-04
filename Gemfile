@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'rails-controller-testing'
 end
 
 group :development do

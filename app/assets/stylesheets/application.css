@@ -18,76 +18,73 @@
  *= require font-awesome
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
 
- :root {
-   --blue: #3778c2;
-   --green: #5fb523;
-   --gray: #434b54;
- }
+:root {
+  --blue: #3778c2;
+  --green: #5fb523;
+  --gray: #434b54;
+}
 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- @font-face {
-   font-family: 'ProximaNovaLight';
-   src: url('Proxima-Nova-Light.ttf');
-   font-weight: 400;
- }
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('Proxima-Nova-Light.ttf');
+  font-weight: 400;
+}
 
- @font-face {
-   font-family: 'ProximaNovaBold';
-   src: url('Proxima-Nova-Bold.ttf');
- }
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('Proxima-Nova-Bold.ttf');
+}
 
- body {
-   font-family: 'ProximaNovaLight', sans-serif;
- }
+body {
+  font-family: 'ProximaNovaLight', sans-serif;
+}
 
- #cover {
-   transition: 400ms;
- }
+#cover {
+  transition: 400ms;
+  background-image: linear-gradient(to top, #3778c2, #7d96d1, #afb6e0, #dad9ef, #fff);
+}
 
- #cover-caption {
-   z-index: 1;
- }
+#cover-caption {
+  z-index: 1;
+}
 
- #cover {
-  background-image: linear-gradient(to top, #3778c2, #7d96d1, #afb6e0, #dad9ef, #ffffff);
- }
-
- #cover h1 {
-    font-family: 'Lobster', cursive;
+#cover h1 {
+  font-family: 'Lobster', cursive;
   color: var(--gray);
   font-weight: 400;
   padding-top: 35%;
- }
+}
 
- .splash-form {
-   margin-top: 55%;
- }
+.splash-form {
+  margin-top: 55%;
+}
 
- .category-image {
-   width: 20%;
- }
+.category-image {
+  width: 20%;
+}
 
- .no-category {
-   height: 75vh;
- }
+.no-category {
+  height: 75vh;
+}
 
- select {
-   border: 1px solid #6c757d;
-   border-radius: 5px;
-   margin-bottom: 20px;
- }
+select {
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
- option {
-   padding: 8px 5px;
-   border-bottom: 1px solid var(--blue);
-   margin: 5px;
-   overflow: scroll;
-   color: #6c757d;
- }
+option {
+  padding: 8px 5px;
+  border-bottom: 1px solid var(--blue);
+  margin: 5px;
+  overflow: scroll;
+  color: #6c757d;
+}

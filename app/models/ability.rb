@@ -6,5 +6,6 @@ class Ability
 
     can :manage, Exchange, user: user
     can :manage, Category, user: user
+    can :read, Category
   end
 end

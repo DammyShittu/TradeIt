@@ -6,8 +6,7 @@ class ExchangesController < ApplicationController
   end
 
   def create
-    @exchange = Exchange.new(exchange_params)
-    @exchange.user = current_user
+    @exchange = current_user.exchanges.build(exchange_params)
 
     respond_to do |format|
       format.html do

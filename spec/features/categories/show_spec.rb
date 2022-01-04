@@ -1,6 +1,6 @@
 require 'rails_helper'
-
-RSpec.feature 'Categories #Show', type: :feature do
+# rubocop:disable Metrics/BlockLength
+RSpec.feature 'Category #Show', type: :feature do
   background do
     visit new_user_session_path
 
@@ -38,4 +38,6 @@ RSpec.feature 'Categories #Show', type: :feature do
   scenario 'show Add A Category button on page' do
     expect(page).to have_link 'Add An Exchange'
   end
+
+  # rubocop:enable Metrics/BlockLength
 end

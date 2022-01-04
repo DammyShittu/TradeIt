@@ -3,8 +3,7 @@ class Category < ApplicationRecord
   has_and_belongs_to_many :exchanges
   has_one_attached :icon, dependent: :destroy
 
-  validates :name, presence: true
-  validates :icon, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
 
   def total_amount
     exchanges.sum(:amount)

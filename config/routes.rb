@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       root 'splash#home', as: :unauthenticated_root
     end
   end
-  resources :categories
-  resources :exchanges
+  resources :categories, only: [:index, :new, :create, :show]
+  resources :exchanges, only: [:new, :create]
 end

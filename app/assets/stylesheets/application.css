@@ -44,7 +44,7 @@
  }
 
  body {
-  font-family: 'ProximaNovaLight', sans-serif;
+   font-family: 'ProximaNovaLight', sans-serif;
  }
 
  #cover {
@@ -60,7 +60,7 @@
  }
 
  #cover h1 {
-  font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
   color: var(--gray);
   font-weight: 400;
   padding-top: 35%;
@@ -76,4 +76,18 @@
 
  .no-category {
    height: 75vh;
+ }
+
+ select {
+   border: 1px solid #6c757d;
+   border-radius: 5px;
+   margin-bottom: 20px;
+ }
+
+ option {
+   padding: 8px 5px;
+   border-bottom: 1px solid var(--blue);
+   margin: 5px;
+   overflow: scroll;
+   color: #6c757d;
  }

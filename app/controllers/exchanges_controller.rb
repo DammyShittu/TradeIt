@@ -21,7 +21,7 @@ class ExchangesController < ApplicationController
   end
 
   private
-  
+
   def exchange_params
     params.require(:exchange).permit(:name, :amount, category_ids: [])
   end

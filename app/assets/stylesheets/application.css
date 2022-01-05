@@ -47,6 +47,10 @@ body {
   font-family: 'ProximaNovaLight', sans-serif;
 }
 
+.pg-title {
+  font-family: 'ProximalNovaBold', sans-serif;
+}
+
 #cover {
   transition: 400ms;
   background-image: linear-gradient(to top, #3778c2, #7d96d1, #afb6e0, #dad9ef, #fff);
@@ -68,11 +72,12 @@ body {
 }
 
 .category-image {
-  width: 20%;
+  width: 60px;
+  height: 60px;
 }
 
 .no-category {
-  height: 75vh;
+  height: 35vh;
 }
 
 select {
@@ -87,4 +92,8 @@ option {
   margin: 5px;
   overflow: scroll;
   color: #6c757d;
+}
+
+.space {
+  padding-bottom: 28%;
 }

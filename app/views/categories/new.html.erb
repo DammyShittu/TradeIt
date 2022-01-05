@@ -14,7 +14,7 @@
 
     <div class="field mt-2">
       <%= f.label :icon, "Please, select an image", class: "form-label mx-3 mb-1 text-muted" %>
-      <%= f.file_field :icon, required: true, placeholder: "Select an image", class: "form-control py-2 bg-white text-muted" %>
+      <%= f.file_field :icon, accept: 'image/png, image/gif, image/jpeg', size: '120x120' required: true, class: "form-control py-2 bg-white text-muted" %>
     </div>
 
   <% end %>

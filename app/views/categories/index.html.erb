@@ -1,0 +1,30 @@
+<header>
+  <nav class="nav navbar-light bg-primary">
+    <div class="container py-1 px-3 d-flex justify-content-between align-items-center">
+    <div></div>
+    <h1 class="fs-6 fw-normal text-white pt-2 pg-title">CATEGORIES</h1>
+    <small><%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "text-white text-decoration-none bg-transparent border-0 fw-normal" %></small>
+    </div>
+  </nav>
+</header>
+
+<section class="container-fluid space">
+    <% if @categories.empty? %>
+       <p class="w-75 d-flex justify-content-center align-items-center mx-auto text-center no-category">
+        You do not have any categories yet<br> Kindly create one with the "Add A Category" button below
+      </p>
+
+      <% else %>
+        <ul class="m-0 p-0 mb-5 list-unstyled">
+          <% @categories.each do |category| %>
+            <%= render partial: 'category_list', locals: { category: category } %>
+          <% end %>
+        </ul>
+    <% end %>
+</section>
+
+<footer class="bg-success p-2 mt-5 fixed-bottom ">
+  <div class="w-100 d-flex justify-content-center align-items-center bg-transparent border border-white">
+  <%= link_to 'Add A Category', new_category_path, class: ' text-white p-2 text-decoration-none stretched-link' %>
+  </div>
+</footer>

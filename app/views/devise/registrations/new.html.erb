@@ -1,0 +1,34 @@
+<section>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <nav class="nav navbar-light bg-primary">
+      <div class="container py-1 px-3 d-flex justify-content-between align-items-center">
+        <%= link_to fa_icon('arrow-left'), unauthenticated_root_path, class: "fs-6 fw-normal text-white"  %>
+        <h1 class="fs-6 fw-normal text-white pt-2">REGISTER</h1>
+        <%= f.submit "Next", class: "text-white fs-6 bg-transparent border-0 fw-normal" %>
+      </div>
+    </nav>
+
+    <div class="field mt-2">
+      <%= f.text_field :name, autocomplete: "name", placeholder: "Full Name", class: "form-control py-2 bg-white", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control py-2 bg-white", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password(6 characters minimum)", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm Password" %>
+    </div>
+  <% end %>
+
+  <div class="d-flex flex-column justify-content-center align-items-center gap-2 my-3">
+    <small class="text-muted">Already have an account? <span><%= link_to 'Log In', new_user_session_path, class: "text-muted" %></span></small>
+  </div>
+
+</section>

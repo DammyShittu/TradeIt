@@ -1,0 +1,49 @@
+<header>
+  <nav class="nav navbar-light bg-primary">
+    <div class="container py-1 px-3 d-flex justify-content-between align-items-center">
+    <%= link_to fa_icon('arrow-left'), authenticated_root_path, class: "fs-6 fw-normal text-white"  %>
+    <h1 class="fs-6 fw-normal text-white pt-2 pg-title">EXCHANGES</h1>
+    <div></div>
+    </div>
+  </nav>
+</header>
+
+<section class="container-fluid space">
+  <ul class="m-0 p-0 my-2 list-unstyled">
+    <li class="my-3 border border-gray p-2 rounded bg-white">
+      <div class="d-flex align-items-center gap-4">
+          <%= image_tag category_img(@category), alt: "Category Icon", class: "category-image" %>
+        <div class="d-flex flex-column mt-2">
+          <h2 class=" fs-5"><%= @category.name  %></h2>
+          <p class="text-muted"><%= @category.created_at.strftime('%d %b %Y') %></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <% if @exchanges.empty? %>
+      <p class="w-75 d-flex justify-content-center align-items-center mx-auto text-center no-category">
+      You do not have any exchanges yet<br> Kindly create one with the "Add An Exchange" button below
+    </p>
+  <% else %>
+          <ul class="m-0 p-0 list-unstyled">
+            <% @exchanges.each do |exchange| %>
+              <li class="my-3 border border-gray p-2 rounded bg-white">
+                  <div class="d-flex justify-content-between align-items-center mt-2 ">
+                    <h2 class=" fs-5"><%= exchange.name  %></h2>
+                    <p>$<%= exchange.amount %></p>
+                </div>
+                    <span class="text-muted"><%= exchange.created_at.strftime('%d %b %Y') %> at <%= exchange.created_at.strftime("%r") %></span>
+              </li>
+            <% end %>
+          </ul>
+  <% end %>
+
+  <h4 class="text-muted d-flex gap-3 m-2 p-3 border border-2 border-gray rounded">Total Amount: $<%= @category.total_amount %></h4>
+</section>
+
+<footer class="footer bg-success p-2 mt-5 fixed-bottom ">
+  <div class="w-100 d-flex justify-content-center align-items-center bg-transparent border border-white">
+  <%= link_to 'Add An Exchange', new_exchange_path, class: ' text-white p-2 text-decoration-none stretched-link' %>
+  </div>
+</footer>

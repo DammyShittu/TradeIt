@@ -1,0 +1,31 @@
+<section>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <nav class="nav navbar-light bg-primary">
+    <div class="container py-1 px-3 d-flex justify-content-between align-items-center">
+    <%= link_to fa_icon('arrow-left'), unauthenticated_root_path, class: "fs-6 fw-normal text-white"  %>
+    <h1 class="fs-6 fw-normal text-white pt-2">LOGIN</h1>
+    <%= f.submit "Log In", class: "text-white fs-6 bg-transparent border-0 fw-normal" %>
+    </div>
+  </nav>
+
+    <div class="field mt-2">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", required: true, class: "form-control py-2 bg-white" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", required: true, class: "form-control py-2 bg-white" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field px-3 py-3 fs-6">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me, class: "text-muted" %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="d-flex flex-column justify-content-center align-items-center gap-2 my-3">
+    <small class="text-muted">Don't have an account yet? <span><%= link_to 'Sign Up', new_user_registration_path, class: "text-muted" %></span></small>
+  </div>
+
+</section>

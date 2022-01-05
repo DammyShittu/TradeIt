@@ -1,0 +1,12 @@
+<li class="my-3 border border-gray p-2 rounded bg-white">
+  <%= link_to category_path(category.id), class: "text-decoration-none d-flex justify-content-between align-items-center text-dark" do %>
+    <div class="d-flex align-items-center gap-2">
+        <%= image_tag category_img(category), alt: "Category Icon", class: "category-image" %>
+      <div class="d-flex flex-column mt-2">
+        <h2 class=" fs-5"><%= category.name  %></h2>
+        <p class="text-muted"><%= category.created_at.strftime('%d %b %Y') %></p>
+      </div>
+    </div>
+    <p>$<%= category.total_amount %></p>
+  <% end %>
+</li>

@@ -23,7 +23,6 @@ RSpec.feature 'Category #Show', type: :feature do
 
   scenario 'display details of a category' do
     expect(page).to have_content(@category.name)
-    expect(page).to have_content('04 Jan 2022')
     expect(page).to have_content('$100')
     expect(page).not_to have_content('$0')
   end

@@ -3,11 +3,15 @@
 > TradeIt is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. In this app, users can;
 > - register and log in, so that the data is private to them.
 > - introduce new transactions associated with a category.
-> - see the money spent on each category.
+> - see the money spent on each category
 
 ## Live Demo
 
 This [app](https://stormy-lake-50200.herokuapp.com/) is currently being hosted on Heroku
+
+## Project Presentation
+
+Kindly click this [link](https://www.loom.com/share/cfd8f1e280c44eb9a9c5016238273365) to view the presentation of the app. The video was recoreded with Loom
 ## Screenshot
 
 - Splash Screen

@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = current_user.categories.build(category_params(:name, :icon))
+    @category = current_user.categories.build(category_params)
 
     respond_to do |format|
       format.html do
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
 
   private
 
-  def category_params(*args)
-    params.require(:category).permit(*args)
+  def category_params
+    params.require(:category).permit(:name, :icon)
   end
 end

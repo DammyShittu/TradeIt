@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.5'
+gem 'aws-sdk-s3', require: false
 gem 'font-awesome-rails'
 # Rubocop linter
 gem 'rubocop', '>= 1.0', '< 2.0'
